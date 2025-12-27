@@ -8,7 +8,7 @@ extern "C" {
 #include <stdint.h>
 
 void strategy_init(void);
-void run_vsss_strategy(void);
+void run_strategy(void);
 
 #ifdef __cplusplus
 }

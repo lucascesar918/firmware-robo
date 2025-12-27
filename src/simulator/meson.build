@@ -3,7 +3,7 @@ dep_protobuf = dependency('protobuf', required : true)
 
 gen_proto = generator(protoc,
   output    : ['@BASENAME@.pb.cc', '@BASENAME@.pb.h'],
-  arguments : ['--proto_path=@CURRENT_SOURCE_DIR@', '--cpp_out=@BUILD_DIR@', '@INPUT@']
+  arguments : ['--proto_path=@CURRENT_SOURCE_DIR@/protos', '--cpp_out=@BUILD_DIR@', '@INPUT@']
 )
 
 proto_srcs = gen_proto.process(

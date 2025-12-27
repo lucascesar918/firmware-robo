@@ -1,0 +1,15 @@
+# PIC16F873
+[binaries]
+c = 'sdcc'
+ar = 'sdar'
+
+[host_machine]
+system = 'bare_metal'
+# Embora seja um PIC16, pertence à família PIC14 (instruções de 14 bits)
+cpu_family = 'pic14'
+cpu = '16f873'
+endian = 'little'
+
+[built-in options]
+c_args = ['-mpic14', '-p16f873', '--use-non-free']
+c_link_args = ['-mpic14', '-p16f873', '--use-non-free']
